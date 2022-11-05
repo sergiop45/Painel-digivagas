@@ -13,9 +13,12 @@ export function Navbar()  {
       </div>
 
       <div className='itens-nav'>
+        
         <Link to='/'>Home</Link>
         <Link to='/vagas'>Vagas</Link>
+        <Link to='/cidades'>Cidades</Link>
         <Link to='/cadastrar'>Cadastrar</Link>
+        
       </div>
    </nav>
   )

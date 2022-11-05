@@ -1,0 +1,28 @@
+.feedCidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedCidades h1 {
+    text-align: center;
+    margin: 4vh auto;
+}
+
+.cardCidade {
+    background-color: darkslategrey;
+    padding: 10px;
+    color: #000;
+    border-radius: 10px;
+}
+.cardCidade div button{
+    margin-right: 9px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: aquamarine;
+}
+.cardCidade div button:first-child {
+    background-color: red;
+}
