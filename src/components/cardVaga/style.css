@@ -1,0 +1,18 @@
+.cardVaga {
+    background-color: bisque;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh auto;
+    width: 50%;
+    border: 1.5px solid #000;
+    border-radius: 4px;
+}
+
+.cardVaga p {
+    margin-bottom: 3vh;
+    margin-left: 3vh;
+}
+.cardVaga h4 {
+    text-align: center;
+}

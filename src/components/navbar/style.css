@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav {
+    margin-left: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-nav p {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.logo-nav img {
+    margin-right: 3vh;
+    height: 80px;
+}
+
+.itens-nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.itens-nav a {
+    text-decoration: none;
+    margin-right: 10vh;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 19px;
+}
+.itens-nav a:hover {
+    color: aqua;
+}

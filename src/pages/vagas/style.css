@@ -1,0 +1,9 @@
+.feedVaga {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedVaga h1 {
+    text-align: center;
+    margin: 4vh auto;
+}
