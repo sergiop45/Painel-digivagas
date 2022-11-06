@@ -18,6 +18,7 @@ export function Navbar()  {
         <Link to='/vagas'>Vagas</Link>
         <Link to='/cidades'>Cidades</Link>
         <Link to='/cadastrar'>Cadastrar</Link>
+        <Link to='/login' >Login</Link>
         
       </div>
    </nav>

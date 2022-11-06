@@ -1,10 +1,13 @@
-import { Button } from '@mui/material'
+
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
-        Home        
+      <br />
+      <h2>Home</h2>
+      <br />
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XoqaMk6fJYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>
   )
 }

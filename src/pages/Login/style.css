@@ -1,0 +1,10 @@
+.LoginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPage h1 {
+    margin: 5vh auto;
+}

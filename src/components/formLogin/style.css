@@ -1,0 +1,29 @@
+
+
+.formLogin {
+    margin: 0 auto;
+    width: 40%;
+    padding: 20px;
+    background-color: darkslategrey;
+    border-radius: 3vh;
+    border: solid 1vh #000;
+    color: #000;
+}
+
+.formLogin form{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.formLogin form input {
+    margin-bottom: 4vh;
+    border-radius: 3vh;
+}
+
+.formLogin form input[type=submit] {
+    background-color: aquamarine;
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+}
