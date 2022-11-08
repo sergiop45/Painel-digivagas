@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import CardVaga from '../../components/cardVaga';
 import './style.css';
 
@@ -6,6 +7,9 @@ const Vagas = () => {
 
   const [vagas, setVagas] = useState();
   const [cidades, setCidades] = useState()
+  const [token, setToken] = useState();
+
+  const navigate = useNavigate();
 
   async function buscarVagas () {
 
@@ -23,6 +27,27 @@ const Vagas = () => {
     
   }
 
+  async function deletar(e, id) {
+
+    e.preventDefault();
+    
+    const idDelete = id+'';
+    
+    fetch('http://localhost:3000/city/'+idDelete, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token,
+      },
+    }).then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log('err : '+err));
+
+  }
+
+  
+
   useEffect(() => {
     buscarVagas();
     buscarCidades();
@@ -35,8 +60,8 @@ const Vagas = () => {
         {vagas && (
           vagas.map(((vaga) =>{
             return (
-              <CardVaga vaga={vaga} key={vaga.id} cidades={cidades}/>
-            )
+
+              <CardVaga vaga={vaga} key={vaga.id} cidades={cidades} deletar={deletar}/>  )
           }))
           
         )}

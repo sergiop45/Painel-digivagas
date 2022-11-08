@@ -4,6 +4,7 @@ import Logo from '../../assets/digimon.png'
 import './style.css'
 
 export function Navbar()  {
+  
   return (
    <nav className='navbar'>
       

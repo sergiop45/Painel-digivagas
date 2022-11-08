@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './style.css';
 
 const FormCidade = () => {
 
   const [name, setName] = useState('');
-  const [token, setToken] = useState('');  
+  const [token, setToken] = useState(''); 
+  const navigate = useNavigate(); 
+
+  useEffect(() => {
+    const getToken = localStorage.getItem('token');
+    
+    if(getToken) {
+    const access_token = JSON.parse(getToken);
+    setToken(access_token.access_token);
+    } else {
+      navigate("/login");
+    }
+    
+  }, []);
+
+  
 
   async function cadastrarCidade(e) {
 
@@ -13,18 +29,25 @@ const FormCidade = () => {
     const data = {
         "name": name
     }
-
+    
     await fetch('http://localhost:3000/city', 
     {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': token,
+        'Authorization': 'Bearer ' + token,
       },
       body: JSON.stringify(data),
-    }).then(() => alert("vaga cadastrada!"))
-    .catch((err) => alert(err));
+    }).then((res) => {
+      if(res.status === 401) {
+        alert("Faça Login!");
+        navigate("/login");
+      } else {
+        alert("Cidade Cadastrada!")
+      }
+    })
+    .catch((err) => console.log(err));
 
     setName('');
     setToken('');
@@ -34,10 +57,9 @@ const FormCidade = () => {
 
   return (
     <div className='formCidade'>
-      <h2>Cadastrar Vaga</h2>
+      <h2>Cadastrar Cidade</h2>
       <form onSubmit={(e) => cadastrarCidade(e)}>
-        Name: <input type="text" value={name} name="name" onChange={(e) => setName(e.target.value)} />
-        Token: <input type="text" value={token} name="token" onChange={(e) => setToken('Bearer ' + e.target.value)}/>
+         Nome: <input type="text" value={name} name="name" onChange={(e) => setName(e.target.value)} />
         <input type="submit" value="Cadastrar" />
       </form>
     </div>

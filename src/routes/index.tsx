@@ -1,11 +1,14 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Cadastrar from "../pages/Cadastrar";
 import Home from "../pages/Home";
 import Vagas from "../pages/vagas";
 import Cidade from "../pages/Cidades";
 import Login from "../pages/Login";
+import { useEffect, useState } from "react";
 
 export const AppRoutes = () => {
+
+
     return (
         
         

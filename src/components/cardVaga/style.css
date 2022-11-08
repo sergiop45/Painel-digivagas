@@ -16,3 +16,14 @@
 .cardVaga h4 {
     text-align: center;
 }
+
+.cardVaga div button{
+    margin-right: 9px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: aquamarine;
+}
+.cardVaga div button:first-child {
+    background-color: red;
+}

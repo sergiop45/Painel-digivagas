@@ -28,7 +28,7 @@ export const FormLogin = () => {
         }).then((res) => res.json())
         .then((dados) => {
             localStorage.setItem('token', JSON.stringify(dados));
-            navigate('/cidades');
+            navigate('/home');
         })
        .catch((err) => console.log(err));
 

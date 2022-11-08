@@ -12,9 +12,10 @@
 
 .cardCidade {
     background-color: darkslategrey;
-    padding: 10px;
+    padding: 3vh;
     color: #000;
     border-radius: 10px;
+    margin-bottom: 2vh;
 }
 .cardCidade div button{
     margin-right: 9px;

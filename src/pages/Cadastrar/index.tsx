@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FormCidade from '../../components/formCidade';
 import FormVaga from '../../components/formVaga';
 import './style.css';
@@ -6,6 +7,15 @@ import './style.css';
 const Cadastrar = () => {
 
   const [cadastro, setCadastro] = useState(1)
+  const [token, setToken] = useState('');
+
+  const navigate = useNavigate();
+
+  
+
+ 
+
+  
   
   return (
     <div>

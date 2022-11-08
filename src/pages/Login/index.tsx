@@ -1,5 +1,4 @@
-import React from 'react'
-import {FormLogin} from '../../components/formLogin'
+import {FormLogin} from '../../components/formLogin';
 import './style.css';
 
 const Login = () => {
